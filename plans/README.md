@@ -4,7 +4,7 @@
 
 ## 기획서란?
 
-사용자의 기능 요청을 분석하여, Developer가 바로 구현에 들어갈 수 있도록 코드 레벨의 상세 기획을 담은 문서입니다.
+사용자의 기능 요청을 분석하여, Frontend Developer/Backend Developer가 바로 구현에 들어갈 수 있도록 코드 레벨의 상세 기획을 담은 문서입니다.
 
 ## 기획서 포맷
 
@@ -35,11 +35,11 @@ plans/
 
 ```
 사용자 요청 → Planner가 기획서 작성 → Orchestrator 리뷰 & 승인
-→ 기획서 기반으로 GitHub Project 이슈 생성 → Developer/Designer 구현
+→ 기획서 기반으로 GitHub Project 이슈 생성 → Frontend Developer/Backend Developer/Designer 구현
 ```
 
 ## 주의사항
 
-- 기획서는 구현 가이드이지, 코드 그 자체가 아님 — 실제 구현은 Developer가 담당
+- 기획서는 구현 가이드이지, 코드 그 자체가 아님 — 실제 구현은 Frontend Developer/Backend Developer가 담당
 - 기존 docs 스펙(API, DB, 디자인)과 충돌하는 기획은 Orchestrator 승인 필요
 - 기획서 변경 시 관련 이슈 상태를 업데이트

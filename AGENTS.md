@@ -8,8 +8,19 @@
 
 - **Orchestrator**: 전체 관리, 작업 분배, 품질 관리
 - **Planner**: 사용자 요청 분석, 개발 기획서 작성 (plans/)
-- **Developer**: docs의 설계 문서를 기반으로 구현
+- **Frontend Developer**: docs의 설계 문서를 기반으로 프론트엔드 구현
+- **Backend Developer**: docs의 설계 문서를 기반으로 백엔드 구현
 - **Designer**: docs의 디자인 문서를 기반으로 UI/UX 구현
+
+## Hermes 프로필 매핑
+
+| 에이전트 | Hermes 프로필 | 기본 모델 |
+|---|---|---|
+| Orchestrator | `orchestrator` | `gpt-5.5` |
+| Planner | `planner` | `gpt-5.5` |
+| Frontend Developer | `frontenddeveloper` | `glm-5.1` |
+| Backend Developer | `backenddeveloper` | `glm-5.1` |
+| Designer | `designer` | `dola-seed-2.0-pro` |
 
 ## 필수 규칙
 
@@ -34,7 +45,8 @@
 - 기획서 머지 전 Orchestrator 리뷰 필수
 
 ### 서브 에이전트 작업 분배 (Orchestrator)
-- 사용자 요청 → Planner에게 기획 지시 → 기획서 승인 → Developer/Designer에 할당
+- 사용자 요청 → Planner에게 기획 지시 → 기획서 승인 → Frontend Developer/Backend Developer/Designer에 할당
+- 프론트엔드 이슈는 `frontenddeveloper`, 백엔드 이슈는 `backenddeveloper` 프로필에 할당
 - 할당 시 이슈 번호, 기획서 경로, docs 문서 경로, 완료 조건 명확히 전달
 - BLOCKED 이슈는 Orchestrator가 docs 업데이트로 해결
 
@@ -47,10 +59,13 @@
 ### 사용 스킬
 - Orchestrator: `technical-writing`, `api-design-reviewer`, `database-designer`
 - Planner: `technical-writing`, `api-design-reviewer`, `database-designer`, `product-manager`
+- Frontend Developer: `tdd`, `react-expert`, `nextjs-expert`, `typescript-expert`, `code-review-expert`
+- Backend Developer: `tdd`, `typescript-expert`, `database-optimizer`, `api-design-reviewer`, `code-review-expert`
 
 ### 참조 문서
 - 에이전트 프로토콜: `protocol/AGENT_PROTOCOL.md`
 - 에이전트 스펙: `spec/AGENT_SPEC.md`
 - 개발 기획서: `plans/`
-- 개발 작업 큐: `tasks/DEVELOPER_TASKS.md`
+- 프론트엔드 작업 큐: `tasks/FRONTEND_DEVELOPER_TASKS.md`
+- 백엔드 작업 큐: `tasks/BACKEND_DEVELOPER_TASKS.md`
 - 디자인 작업 큐: `tasks/DESIGNER_TASKS.md`

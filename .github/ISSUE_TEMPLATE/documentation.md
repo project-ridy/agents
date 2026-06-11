@@ -8,7 +8,7 @@ labels: documentation
 <!-- 어떤 문서 작업인지 설명 -->
 
 ## 관련 에이전트
-<!-- Orchestrator / Planner / Developer / Designer -->
+<!-- Orchestrator / Planner / Frontend Developer / Backend Developer / Designer -->
 
 ## 관련 docs 스펙
 <!-- docs 레포의 어떤 문서와 관련 있는지 -->

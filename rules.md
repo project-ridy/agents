@@ -86,7 +86,7 @@
 ```markdown
 ### TASK-<번호>: <작업명>
 - **상태**: PENDING | IN_PROGRESS | DONE
-- **담당**: developer | designer
+- **담당**: frontenddeveloper | backenddeveloper | designer
 - **레포**: frontend | backend
 - **우선순위**: HIGH | MEDIUM | LOW
 - **의존성**: TASK-XXX (설명)
