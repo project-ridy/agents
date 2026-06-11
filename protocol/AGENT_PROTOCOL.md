@@ -22,7 +22,7 @@ Ridy 프로젝트는 4개의 에이전트가 협업합니다:
 | 필드 | 옵션 | 설명 |
 |---|---|---|
 | **Phase** | Phase 1~5 | 개발 단계 |
-| **레포** | docs, frontend, backend | 작업 대상 레포 |
+| **레포** | docs, frontend, backend, agents | 작업 대상 레포 |
 | **작업 유형** | 기능, 버그 수정, 테스트, 디자인, 문서, 인프라 | 작업 종류 |
 | **우선순위** | P0-Critical, P1-High, P2-Medium, P3-Low | 우선순위 |
 

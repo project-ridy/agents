@@ -24,12 +24,12 @@
 ### 설계 문서 참조
 - 이 레포의 에이전트 프로토콜/스펙은 **docs 레포**의 설계 문서를 기준으로 작성
 - docs 레포: https://github.com/project-ridy/docs
-- API 스펙 변경 시 `AGENT_PROTOCOL.md`의 이슈 매핑 업데이트
-- DB 스키마 변경 시 `AGENT_SPEC.md`의 의존성 섹션 업데이트
+- 작업 흐름 변경 시 `protocol/AGENT_PROTOCOL.md`의 이슈 매핑 업데이트
+- 에이전트 역할 변경 시 `spec/AGENT_SPEC.md`의 의존성/역할 섹션 업데이트
 
 ### 기획서 작성 (Planner)
 - 사용자 요청이 들어오면 Planner가 `plans/`에 기획서 작성
-- 기획서는 `AGENT_SPEC.md`에 정의된 포맷 준수
+- 기획서는 `spec/AGENT_SPEC.md`에 정의된 포맷 준수
 - 기존 docs 스펙과 충돌 시 Orchestrator에 확인
 - 기획서 머지 전 Orchestrator 리뷰 필수
 
