@@ -14,13 +14,15 @@
 
 ## Hermes 프로필 매핑
 
-| 에이전트 | Hermes 프로필 | 기본 모델 |
-|---|---|---|
-| Orchestrator | `orchestrator` | `gpt-5.5` |
-| Planner | `planner` | `gpt-5.5` |
-| Frontend Developer | `frontend` | `glm-5.1` |
-| Backend Developer | `backend` | `glm-5.1` |
-| Designer | `designer` | `dola-seed-2.0-pro` |
+실제 Hermes 프로필 모델 설정은 `config/HERMES_MODELS.yaml`을 기준으로 관리합니다.
+
+| 에이전트 | Hermes 프로필 | 기본 모델 | Provider | Base URL | Max turns |
+|---|---|---|---|---|---|
+| Orchestrator | `orchestrator` | `gpt-5.5` | `openai-codex` | `https://chatgpt.com/backend-api/codex` | `150` |
+| Planner | `planner` | `gpt-5.5` | `openai-codex` | `https://chatgpt.com/backend-api/codex` | `150` |
+| Frontend Developer | `frontend` | `kimi-k2.5` | `byteplus-ark` | — | `150` |
+| Backend Developer | `backend` | `glm-5.1` | `byteplus-ark` | — | `150` |
+| Designer | `designer` | `kimi-k2.5` | `byteplus-ark` | — | `150` |
 
 ## 필수 규칙
 

@@ -10,6 +10,8 @@ agents/
 ├── README.md                        # 이 파일
 ├── CONTRIBUTING.md                  # 기여 가이드
 ├── rules.md                         # 문서 작성 규칙
+├── config/                          # 에이전트 실행 설정값
+│   └── HERMES_MODELS.yaml           # Hermes 프로필별 모델/provider 설정
 ├── spec/                            # 에이전트 스펙
 │   └── AGENT_SPEC.md                # 5개 에이전트 역할/능력/제약
 ├── protocol/                        # 협업 프로토콜
