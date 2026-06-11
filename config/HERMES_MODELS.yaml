@@ -1,0 +1,27 @@
+# Ridy Hermes profile model configuration
+# Generated from local Hermes profile settings on 2026-06-11.
+# Keep this file in sync when changing Hermes profiles with `hermes model` or `hermes config set`.
+
+profiles:
+  orchestrator:
+    model: gpt-5.5
+    provider: openai-codex
+    base_url: https://chatgpt.com/backend-api/codex
+    max_turns: 150
+  planner:
+    model: gpt-5.5
+    provider: openai-codex
+    base_url: https://chatgpt.com/backend-api/codex
+    max_turns: 150
+  frontend:
+    model: kimi-k2.5
+    provider: byteplus-ark
+    max_turns: 150
+  backend:
+    model: glm-5.1
+    provider: byteplus-ark
+    max_turns: 150
+  designer:
+    model: kimi-k2.5
+    provider: byteplus-ark
+    max_turns: 150
