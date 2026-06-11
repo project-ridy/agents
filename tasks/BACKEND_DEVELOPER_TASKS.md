@@ -1,12 +1,12 @@
 # Ridy — 백엔드 개발 에이전트 작업 큐
 
-> Orchestrator가 이 파일에 백엔드 작업을 추가합니다. Backend Developer(`backenddeveloper`)는 여기서 작업을 가져가 수행합니다.
+> Orchestrator가 이 파일에 백엔드 작업을 추가합니다. Backend Developer(`backend`)는 여기서 작업을 가져가 수행합니다.
 
 ## 현재 작업
 
 ### TASK-B001: 백엔드 프로젝트 셋업
 - **상태**: PENDING
-- **담당**: backenddeveloper
+- **담당**: backend
 - **레포**: backend
 - **우선순위**: HIGH
 - **의존성**: 없음
@@ -19,7 +19,7 @@
 
 ### TASK-B002: 인증 API 구현
 - **상태**: PENDING
-- **담당**: backenddeveloper
+- **담당**: backend
 - **레포**: backend
 - **우선순위**: HIGH
 - **의존성**: TASK-B001
@@ -33,7 +33,7 @@
 
 ### TASK-B003: DB 스키마 구현
 - **상태**: PENDING
-- **담당**: backenddeveloper
+- **담당**: backend
 - **레포**: backend
 - **우선순위**: HIGH
 - **의존성**: TASK-B001

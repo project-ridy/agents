@@ -1,12 +1,12 @@
 # Ridy — 프론트엔드 개발 에이전트 작업 큐
 
-> Orchestrator가 이 파일에 프론트엔드 작업을 추가합니다. Frontend Developer(`frontenddeveloper`)는 여기서 작업을 가져가 수행합니다.
+> Orchestrator가 이 파일에 프론트엔드 작업을 추가합니다. Frontend Developer(`frontend`)는 여기서 작업을 가져가 수행합니다.
 
 ## 현재 작업
 
 ### TASK-F001: 프론트엔드 프로젝트 셋업
 - **상태**: PENDING
-- **담당**: frontenddeveloper
+- **담당**: frontend
 - **레포**: frontend
 - **우선순위**: HIGH
 - **의존성**: 없음
@@ -20,7 +20,7 @@
 
 ### TASK-F002: 로그인 화면 구현
 - **상태**: PENDING
-- **담당**: frontenddeveloper
+- **담당**: frontend
 - **레포**: frontend
 - **우선순위**: MEDIUM
 - **의존성**: TASK-F001

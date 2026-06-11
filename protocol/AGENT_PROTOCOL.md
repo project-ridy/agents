@@ -8,8 +8,8 @@ Ridy 프로젝트는 5개의 에이전트가 협업합니다:
 |---|---|---|---|
 | **Orchestrator** | `orchestrator` | 전체 관리, 작업 분배, 품질 관리 | docs |
 | **Planner** | `planner` | 사용자 요청 분석, 개발 기획서 작성 | agents (plans/) |
-| **Frontend Developer** | `frontenddeveloper` | 프론트엔드 기능 구현, 화면/훅/API 연동 | frontend |
-| **Backend Developer** | `backenddeveloper` | 백엔드 API, DB, 인프라 코드 구현 | backend |
+| **Frontend Developer** | `frontend` | 프론트엔드 기능 구현, 화면/훅/API 연동 | frontend |
+| **Backend Developer** | `backend` | 백엔드 API, DB, 인프라 코드 구현 | backend |
 | **Designer** | `designer` | UI/UX 디자인, 에셋 제작 | frontend (design 파일) |
 
 ## GitHub Project
@@ -67,8 +67,8 @@ Ridy 프로젝트는 5개의 에이전트가 협업합니다:
 |---|---|---|---|
 | project-ridy/docs | Orchestrator | `orchestrator` | 기획, 문서, 디자인 가이드 |
 | project-ridy/agents | Planner / Orchestrator | `planner`, `orchestrator` | 기획서, 에이전트 스펙, 작업 큐 |
-| project-ridy/backend | Backend Developer | `backenddeveloper` | API, DB, 인프라, 백엔드 테스트 |
-| project-ridy/frontend | Frontend Developer / Designer | `frontenddeveloper`, `designer` | 화면, 컴포넌트, API 연동, 프론트 테스트 |
+| project-ridy/backend | Backend Developer | `backend` | API, DB, 인프라, 백엔드 테스트 |
+| project-ridy/frontend | Frontend Developer / Designer | `frontend`, `designer` | 화면, 컴포넌트, API 연동, 프론트 테스트 |
 
 ## 에이전트 규칙
 

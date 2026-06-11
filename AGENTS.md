@@ -18,8 +18,8 @@
 |---|---|---|
 | Orchestrator | `orchestrator` | `gpt-5.5` |
 | Planner | `planner` | `gpt-5.5` |
-| Frontend Developer | `frontenddeveloper` | `glm-5.1` |
-| Backend Developer | `backenddeveloper` | `glm-5.1` |
+| Frontend Developer | `frontend` | `glm-5.1` |
+| Backend Developer | `backend` | `glm-5.1` |
 | Designer | `designer` | `dola-seed-2.0-pro` |
 
 ## 필수 규칙
@@ -46,7 +46,7 @@
 
 ### 서브 에이전트 작업 분배 (Orchestrator)
 - 사용자 요청 → Planner에게 기획 지시 → 기획서 승인 → Frontend Developer/Backend Developer/Designer에 할당
-- 프론트엔드 이슈는 `frontenddeveloper`, 백엔드 이슈는 `backenddeveloper` 프로필에 할당
+- 프론트엔드 이슈는 `frontend`, 백엔드 이슈는 `backend` 프로필에 할당
 - 할당 시 이슈 번호, 기획서 경로, docs 문서 경로, 완료 조건 명확히 전달
 - BLOCKED 이슈는 Orchestrator가 docs 업데이트로 해결
 

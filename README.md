@@ -28,8 +28,8 @@ agents/
 |---|---|---|---|---|
 | **Orchestrator** | `orchestrator` | 전체 관리, 작업 분배, 품질 관리 | docs | [AGENT_SPEC.md](spec/AGENT_SPEC.md) |
 | **Planner** | `planner` | 사용자 요청 분석, 개발 기획서 작성 | agents (plans/) | [AGENT_SPEC.md](spec/AGENT_SPEC.md) |
-| **Frontend Developer** | `frontenddeveloper` | 프론트엔드 기능 구현 | frontend | [AGENT_SPEC.md](spec/AGENT_SPEC.md) |
-| **Backend Developer** | `backenddeveloper` | 백엔드 API/DB 구현 | backend | [AGENT_SPEC.md](spec/AGENT_SPEC.md) |
+| **Frontend Developer** | `frontend` | 프론트엔드 기능 구현 | frontend | [AGENT_SPEC.md](spec/AGENT_SPEC.md) |
+| **Backend Developer** | `backend` | 백엔드 API/DB 구현 | backend | [AGENT_SPEC.md](spec/AGENT_SPEC.md) |
 | **Designer** | `designer` | UI/UX 디자인, 접근성 | frontend | [AGENT_SPEC.md](spec/AGENT_SPEC.md) |
 
 ## 🔗 관련 레포
