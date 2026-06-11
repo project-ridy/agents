@@ -81,6 +81,7 @@ Hermes 프로필별 실제 모델/provider 설정은 `config/HERMES_MODELS.yaml`
 5. main 브랜치에 직접 커밋 금지 — PR로 리뷰
 6. 완료 후 **이슈를 "Done"으로 변경**
 7. 기능 작업 후 **후속 테스트 이슈를 진행** (없는 경우 생성)
+8. **이슈/PR 템플릿 준수** — 각 레포의 `.github/ISSUE_TEMPLATE/`과 `.github/PULL_REQUEST_TEMPLATE.md`에 정의된 형식과 필드를 반드시 채운다. 자유 형식으로 작성 금지. 상세 규칙은 `AGENTS.md`의 "이슈/PR 템플릿 준수" 섹션 참조
 
 ### Frontend Developer
 1. `docs/design/DESIGN_SYSTEM.md` 토큰을 사용한다
