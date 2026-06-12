@@ -8,7 +8,7 @@ Hermes 프로필별 실제 모델/provider 설정은 `config/HERMES_MODELS.yaml`
 | 에이전트 | Hermes 프로필 | 역할 | 작업 레포 |
 |---|---|---|---|
 | **Orchestrator** | `orchestrator` | 전체 관리, 작업 분배, 품질 관리 | docs |
-| **Planner** | `planner` | 사용자 요청 분석, 개발 기획서 작성 | agents (plans/) |
+| **Planner** | `planner` | 사용자 요청 분석, 개발 기획서 작성 | docs (planning/implementation), agents (agent plans) |
 | **Frontend Developer** | `frontend` | 프론트엔드 기능 구현, 화면/훅/API 연동 | frontend |
 | **Backend Developer** | `backend` | 백엔드 API, DB, 인프라 코드 구현 | backend |
 | **Designer** | `designer` | UI/UX 디자인, 에셋 제작 | frontend (design 파일) |
@@ -42,7 +42,7 @@ Hermes 프로필별 실제 모델/provider 설정은 `config/HERMES_MODELS.yaml`
 
 ```
 1. 사용자가 기능 요청 → Orchestrator가 Planner에게 기획 지시
-2. Planner가 요청 분석 & 개발 기획서 작성 (plans/)
+2. Planner가 요청 분석 & 개발 기획서 작성 (`docs/planning/implementation/`)
 3. Orchestrator가 기획서 리뷰 & 승인
 4. Orchestrator가 기획서 기반으로 GitHub Project에 이슈 생성
 5. 레포 기준으로 Frontend Developer / Backend Developer / Designer에 작업 할당
@@ -89,7 +89,8 @@ Hermes 프로필별 실제 모델/provider 설정은 `config/HERMES_MODELS.yaml`
 3. API 연동 시 `docs/api/` 스펙과 Planner 기획서의 함수 시그니처를 따른다
 4. **TDD 필수** — Red → Green → Refactor 사이클 (CONTRIBUTING.md 참고)
 5. 기능 PR 머지 후 대응되는 프론트엔드 테스트 이슈를 진행
-6. **기획서 준수** — `plans/`의 코드 구조, 예외 처리, 테스트 시나리오를 따른다
+6. **기획서 준수** — `docs/planning/implementation/`의 코드 구조, 예외 처리, 테스트 시나리오를 따른다
+7. **케이스 추적 필수** — 기획서의 구현/테스트 케이스 등록표에 있는 모든 케이스 ID를 구현하고 대응 테스트 파일/테스트명을 PR 확인표에 기록한다
 
 ### Backend Developer
 1. API 작업 시 `docs/api/` 스펙을 정확히 따른다
@@ -97,15 +98,17 @@ Hermes 프로필별 실제 모델/provider 설정은 `config/HERMES_MODELS.yaml`
 3. NestJS/Prisma 구현은 backend `rules.md`와 CONTRIBUTING.md를 따른다
 4. **TDD 필수** — Red → Green → Refactor 사이클 (CONTRIBUTING.md 참고)
 5. 기능 PR 머지 후 대응되는 백엔드 테스트 이슈를 진행
-6. **기획서 준수** — `plans/`의 코드 구조, 예외 처리, 테스트 시나리오를 따른다
+6. **기획서 준수** — `docs/planning/implementation/`의 코드 구조, 예외 처리, 테스트 시나리오를 따른다
+7. **케이스 추적 필수** — 기획서의 구현/테스트 케이스 등록표에 있는 모든 케이스 ID를 구현하고 대응 테스트 파일/테스트명을 PR 확인표에 기록한다
 
 ### Planner
 1. 사용자 요청을 기능 단위로 분해하여 개발 기획서를 작성한다
 2. 기획서에는 코드 구조, 함수 시그니처, 예외 처리, 엣지 케이스, 테스트 시나리오를 포함한다
-3. 프론트엔드/백엔드 담당 범위를 명확히 분리한다
-4. 기존 docs 스펙(API, DB, 디자인)과의 충돌 여부를 사전에 확인한다
-5. 기획서는 `plans/` 디렉토리에 작성한다
-6. 기획서 머지 전 Orchestrator의 리뷰를 받는다
+3. 기획서에는 구현/테스트 케이스 등록표를 포함하고 모든 기능 코드 항목에 케이스 ID, 구현 파일, 구현 단위, 테스트 파일, 테스트 이름, A/E/X 연결을 명시한다
+4. 프론트엔드/백엔드 담당 범위를 명확히 분리한다
+5. 기존 docs 스펙(API, DB, 디자인)과의 충돌 여부를 사전에 확인한다
+6. 표준 구현 계획서는 `docs/planning/implementation/`에 작성하고, 에이전트 자체 변경 계획만 `agents/plans/`에 작성한다
+7. 기획서 머지 전 Orchestrator의 리뷰를 받는다
 
 ### Designer
 1. `docs/design/DESIGN_SYSTEM.md`의 컬러/타포를 준수한다

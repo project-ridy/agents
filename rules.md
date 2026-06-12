@@ -53,20 +53,32 @@
 
 ---
 
-## 개발 기획서 (plans/)
+## 개발 기획서
 
-### 네이밍
-- `PLAN-<순번>-<기능명>.md` 형식
-- 순번은 001부터 순차 증가
-- 기능명은 한글 하이픈 케이스
+### 위치와 네이밍
+- 표준 구현 계획서는 `docs/planning/implementation/YYYY-MM-DD_<repo><issue>-<short-name>.md`에 작성
+- 에이전트 프로토콜/스펙/작업 큐 자체 변경 계획만 `agents/plans/PLAN-<순번>-<기능명>.md`에 작성
+- `agents/plans/`의 순번은 001부터 순차 증가
+- 기능명은 한글 하이픈 케이스 또는 짧은 영문 kebab-case
 
 ### 필수 섹션
 1. **개요** — 배경, 대상, 기대 효과
 2. **기능 분해** — 하위 기능 + 우선순위 테이블
 3. **코드 구조** — 백엔드/프론트엔드 구조
 4. **상세 설계** — 정상 흐름, 함수 시그니처, 예외 처리, 엣지 케이스
-5. **테스트 시나리오** — UT/IT/E2E
-6. **의존성** — 선후관계, docs 업데이트 항목
+5. **구현/테스트 케이스 등록표** — 기능 코드 항목별 케이스 ID, 구현 파일/단위, 테스트 파일/이름, A/E/X 연결
+6. **테스트 시나리오** — UT/IT/E2E
+7. **의존성** — 선후관계, docs 업데이트 항목
+
+### 구현/테스트 케이스 등록표 형식
+| 케이스 ID | 기능 코드 항목 | 구현 대상 파일 | 구현 단위 | 대응 테스트 파일 | 테스트 이름 | A/E/X 연결 |
+|---|---|---|---|---|---|---|
+| FE-CASE-001 | 홈 검색 라우팅 | app/page.tsx | handleSearch | __tests__/Home.test.tsx | 경로와 시간을 입력하면 매칭 결과로 이동한다 | A-01 |
+
+### 등록 규칙
+- 기능 코드 항목은 page, component, hook, API 함수, GraphQL operation, Resolver, Service, Prisma 변경을 포함한다.
+- 모든 기능 코드 항목은 대응 테스트 파일과 테스트 이름을 가져야 한다.
+- 테스트 불가 항목은 범위 제외 또는 BLOCKED 사유를 명시한다.
 
 ### 예외 처리 테이블 형식
 | 케이스 | 조건 | HTTP 상태 | 에러 코드 | 처리 |
@@ -109,5 +121,5 @@
 |---|---|
 | 에이전트 역할 변경 | spec/AGENT_SPEC.md, protocol/AGENT_PROTOCOL.md, AGENTS.md |
 | 작업 흐름 변경 | protocol/AGENT_PROTOCOL.md, 각 레포 AGENTS.md |
-| 기획서 작성 | plans/PLAN-XXX.md, tasks/ 작업 큐 |
+| 기획서 작성 | docs/planning/implementation/*.md 또는 agents/plans/PLAN-XXX.md, tasks/ 작업 큐 |
 | docs 스펙 변경 | 관련 기획서의 의존성 섹션 |

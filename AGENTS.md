@@ -7,7 +7,7 @@
 이 레포는 Ridy 프로젝트의 **모든 에이전트 관련 문서**를 관리합니다.
 
 - **Orchestrator**: 전체 관리, 작업 분배, 품질 관리
-- **Planner**: 사용자 요청 분석, 개발 기획서 작성 (plans/)
+- **Planner**: 사용자 요청 분석, 구현 계획서 작성 (`docs/planning/implementation/`, 에이전트 자체 변경은 `agents/plans/`)
 - **Frontend Developer**: docs의 설계 문서를 기반으로 프론트엔드 구현
 - **Backend Developer**: docs의 설계 문서를 기반으로 백엔드 구현
 - **Designer**: docs의 디자인 문서를 기반으로 UI/UX 구현
@@ -89,8 +89,10 @@
 - 에이전트 역할 변경 시 `spec/AGENT_SPEC.md`의 의존성/역할 섹션 업데이트
 
 ### 기획서 작성 (Planner)
-- 사용자 요청이 들어오면 Planner가 `plans/`에 기획서 작성
+- 사용자 요청이 들어오면 Planner가 표준 구현 계획서를 `docs/planning/implementation/`에 작성
+- 에이전트 프로토콜/스펙/작업 큐 자체 변경 계획만 `agents/plans/`에 작성
 - 기획서는 `spec/AGENT_SPEC.md`에 정의된 포맷 준수
+- 기획서에는 구현/테스트 케이스 등록표를 반드시 포함하고, 모든 기능 코드 항목에 케이스 ID와 대응 테스트를 연결
 - 기존 docs 스펙과 충돌 시 Orchestrator에 확인
 - 기획서 머지 전 Orchestrator 리뷰 필수
 
@@ -115,7 +117,8 @@
 ### 참조 문서
 - 에이전트 프로토콜: `protocol/AGENT_PROTOCOL.md`
 - 에이전트 스펙: `spec/AGENT_SPEC.md`
-- 개발 기획서: `plans/`
+- 개발 기획서: `docs/planning/implementation/`
+- 에이전트 자체 변경 계획: `agents/plans/`
 - 프론트엔드 작업 큐: `tasks/FRONTEND_DEVELOPER_TASKS.md`
 - 백엔드 작업 큐: `tasks/BACKEND_DEVELOPER_TASKS.md`
 - 디자인 작업 큐: `tasks/DESIGNER_TASKS.md`

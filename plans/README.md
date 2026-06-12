@@ -1,10 +1,12 @@
-# 개발 기획서 (Plans)
+# 에이전트 변경 계획서 (Plans)
 
-이 디렉토리는 **Planner 에이전트**가 작성한 개발 기획서를 관리합니다.
+이 디렉토리는 **에이전트 프로토콜/스펙/작업 큐 자체 변경**에 대한 계획서를 관리합니다.
+
+일반 제품/프론트엔드/백엔드 구현 계획서는 `docs/planning/implementation/`에 작성합니다.
 
 ## 기획서란?
 
-사용자의 기능 요청을 분석하여, Frontend Developer/Backend Developer가 바로 구현에 들어갈 수 있도록 코드 레벨의 상세 기획을 담은 문서입니다.
+에이전트 시스템 변경 요청을 분석하여, Orchestrator/Planner가 프로토콜, 스펙, 작업 큐, OpenCode 에이전트 정의를 일관되게 바꿀 수 있도록 상세 기획을 담은 문서입니다.
 
 ## 기획서 포맷
 
@@ -14,8 +16,9 @@
 2. **기능 분해** — 하위 기능 단위로 분해 + 우선순위
 3. **코드 구조** — 백엔드/프론트엔드 모듈/컴포넌트 구조
 4. **상세 설계** — 정상 흐름, 함수 시그니처, 예외 처리, 엣지 케이스
-5. **테스트 시나리오** — UT/IT/E2E 테스트 케이스
-6. **의존성** — 선후관계, docs 업데이트 항목
+5. **구현/테스트 케이스 등록표** — 변경 항목별 케이스 ID, 대상 파일, 확인 방법
+6. **테스트 시나리오** — 문서 검증, 키워드 검색, diff check 등
+7. **의존성** — 선후관계, docs 업데이트 항목
 
 ## 네이밍 규칙
 
@@ -34,12 +37,12 @@ plans/
 ## 워크플로우
 
 ```
-사용자 요청 → Planner가 기획서 작성 → Orchestrator 리뷰 & 승인
-→ 기획서 기반으로 GitHub Project 이슈 생성 → Frontend Developer/Backend Developer/Designer 구현
+에이전트 변경 요청 → Planner가 변경 계획 작성 → Orchestrator 리뷰 & 승인
+→ 기획서 기반으로 GitHub Project 이슈 생성 → Orchestrator/Planner가 agents/docs 파일 갱신
 ```
 
 ## 주의사항
 
-- 기획서는 구현 가이드이지, 코드 그 자체가 아님 — 실제 구현은 Frontend Developer/Backend Developer가 담당
+- 일반 제품 구현 계획은 이 디렉토리에 작성하지 않음 — `docs/planning/implementation/` 사용
 - 기존 docs 스펙(API, DB, 디자인)과 충돌하는 기획은 Orchestrator 승인 필요
 - 기획서 변경 시 관련 이슈 상태를 업데이트
