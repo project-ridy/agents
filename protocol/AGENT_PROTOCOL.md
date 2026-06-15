@@ -82,6 +82,8 @@ Hermes 프로필별 실제 모델/provider 설정은 `config/HERMES_MODELS.yaml`
 6. 완료 후 **이슈를 "Done"으로 변경**
 7. 기능 작업 후 **후속 테스트 이슈를 진행** (없는 경우 생성)
 8. **이슈/PR 템플릿 준수** — 각 레포의 `.github/ISSUE_TEMPLATE/`과 `.github/PULL_REQUEST_TEMPLATE.md`에 정의된 형식과 필드를 반드시 채운다. 자유 형식으로 작성 금지. 상세 규칙은 `AGENTS.md`의 "이슈/PR 템플릿 준수" 섹션 참조
+9. **기획-코드-테스트 검증 강제** — backend/frontend 기능·버그·테스트 이슈와 PR은 구현 계획서의 Case ID(A/E/X)를 기준으로 구현 파일/단위와 테스트 파일/테스트명을 연결한 확인표를 반드시 포함한다. 확인표가 비었거나 Case ID가 누락된 PR은 완료로 간주하지 않는다.
+10. **문서 선행 원칙** — 구현 계획서에 Case ID가 없거나 docs 스펙과 연결되지 않은 경우 구현하지 않고 BLOCKED로 보고한다. Orchestrator/Planner가 `docs/planning/implementation/` 계획서와 관련 docs를 먼저 갱신해야 한다.
 
 ### Frontend Developer
 1. `docs/design/DESIGN_SYSTEM.md` 토큰을 사용한다
@@ -90,6 +92,7 @@ Hermes 프로필별 실제 모델/provider 설정은 `config/HERMES_MODELS.yaml`
 4. **TDD 필수** — Red → Green → Refactor 사이클 (CONTRIBUTING.md 참고)
 5. 기능 PR 머지 후 대응되는 프론트엔드 테스트 이슈를 진행
 6. **기획서 준수** — `plans/`의 코드 구조, 예외 처리, 테스트 시나리오를 따른다
+7. **Case ID 증명** — PR 본문에 모든 계획서 Case ID별 구현 파일/단위, 테스트 파일/테스트명, 검증 결과를 기록한다. UI-only Case도 렌더링/접근성/라우팅 테스트 또는 수동 검증 근거를 연결한다.
 
 ### Backend Developer
 1. API 작업 시 `docs/api/` 스펙을 정확히 따른다
@@ -98,6 +101,7 @@ Hermes 프로필별 실제 모델/provider 설정은 `config/HERMES_MODELS.yaml`
 4. **TDD 필수** — Red → Green → Refactor 사이클 (CONTRIBUTING.md 참고)
 5. 기능 PR 머지 후 대응되는 백엔드 테스트 이슈를 진행
 6. **기획서 준수** — `plans/`의 코드 구조, 예외 처리, 테스트 시나리오를 따른다
+7. **Case ID 증명** — PR 본문에 모든 계획서 Case ID별 GraphQL SDL/Resolver/Service/Prisma 구현 단위, 테스트 파일/테스트명, 검증 결과를 기록한다. API/DB 변경은 docs Case와 schema/codegen 검증을 함께 연결한다.
 
 ### Planner
 1. 사용자 요청을 기능 단위로 분해하여 개발 기획서를 작성한다
@@ -106,6 +110,7 @@ Hermes 프로필별 실제 모델/provider 설정은 `config/HERMES_MODELS.yaml`
 4. 기존 docs 스펙(API, DB, 디자인)과의 충돌 여부를 사전에 확인한다
 5. 기획서는 `plans/` 디렉토리에 작성한다
 6. 기획서 머지 전 Orchestrator의 리뷰를 받는다
+7. 모든 구현 계획서는 **구현/테스트 케이스 레지스트리**를 포함한다. 레지스트리는 Case ID(A/E/X), 구현 파일/단위, 테스트 파일/테스트명, 관련 docs 링크, 완료 기준을 연결해야 한다.
 
 ### Designer
 1. `docs/design/DESIGN_SYSTEM.md`의 컬러/타포를 준수한다

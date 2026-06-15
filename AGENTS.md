@@ -60,6 +60,7 @@
    - **버그 이슈**: 버그 설명, 재현 방법, 기대 동작, 실제 동작, TDD 사이클
    - **테스트 이슈**: 테스트 대상, 관련 기능 이슈, 테스트 종류, 테스트 케이스 표, 완료 조건
    - **문서 이슈**: 작업 내용, 문서 카테고리(docs) / 관련 에이전트(agents), 완료 조건
+   - **backend/frontend 기능·버그·테스트 이슈**: 구현 계획서 경로와 Case ID(A/E/X)별 구현/테스트 매핑 표
 3. 이슈 제목 접두어 준수: `[FEAT]`, `[FIX]`, `[TEST]`, `[DOCS]`
 
 #### PR 생성 규칙
@@ -71,8 +72,17 @@
    - **관련 이슈**: `Closes #<번호>` 형식으로 반드시 연결
    - **TDD 체크리스트**: Red → Green → Refactor → Verify 각 단계 결과 기록 (backend/frontend)
    - **테스트 결과**: `npm run test` 실행 결과를 코드 블록으로 첨부 (backend/frontend)
+   - **기획서 Case ID 구현/테스트 확인**: backend/frontend PR은 계획서 경로와 Case ID별 구현 파일/단위, 테스트 파일/테스트명, 결과를 표로 기록. 누락 시 PR 미완료
    - **변경된 문서 카테고리**: 해당하는 항목 체크 (docs)
    - **API/DB 변경 사항**: 변경 여부와 영향 범위 명시 (backend)
+
+#### 기획-코드-테스트 검증 규칙
+
+1. Planner는 `docs/planning/implementation/` 계획서마다 **구현/테스트 케이스 레지스트리**를 작성한다.
+2. 레지스트리는 최소 `Case ID`, `기획 A/E/X 링크`, `구현 파일/단위`, `테스트 파일/테스트명`, `완료 기준`을 포함한다.
+3. Frontend Developer와 Backend Developer는 이슈/PR 본문의 Case ID 확인표를 채우지 않으면 작업 완료를 선언할 수 없다.
+4. Orchestrator는 Case ID 확인표가 빈칸이거나 계획서와 불일치하는 PR을 반려한다.
+5. 계획서나 docs에 없는 동작은 구현하지 않고 BLOCKED 처리한다.
 
 ### 작업 흐름
 1. 모든 작업은 **GitHub Organization Project**의 이슈에서 시작 — https://github.com/orgs/project-ridy/projects/1
