@@ -2,6 +2,19 @@
 
 > Orchestrator가 이 파일에 프론트엔드 작업을 추가합니다. Frontend Developer(`frontend`)는 여기서 작업을 가져가 수행합니다.
 
+## 작업 큐 항목 필수 검증 필드
+
+Frontend Developer에게 할당되는 기능/버그/테스트 작업은 반드시 다음 정보를 포함해야 합니다.
+
+- GitHub 이슈 번호
+- 구현 계획서 경로(`docs/planning/implementation/...`)
+- 관련 docs 문서 경로
+- Case ID(A/E/X)별 구현 예정 파일/단위
+- Case ID(A/E/X)별 테스트 예정 파일/테스트명
+- 실행할 검증 명령
+
+위 정보가 누락된 작업은 구현하지 않고 Orchestrator에 BLOCKED로 보고합니다.
+
 ## 현재 작업
 
 ### TASK-F001: 프론트엔드 프로젝트 셋업
